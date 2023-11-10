@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quizStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="firstPG">
+        <!--open screen left square-->
+        <div class="leftSquareBG">
+            <img src="images/open page/left image.jpg" alt="left image" id="leftImage">
+
+            <!--Tourism in sriLanka text-->
+            <div class="bodyTextL">
+                <div class="containerL">
+                    <h1 class="h1L">Sri Lanka</h1>
+                    <br>
+                    <div class="contentL v2L">
+                        <p class="p1">Sri Lanka is a gem in the Indian Ocean, with its picturesque landscapes, verdant hills, and sandy beaches. The island nation is rich in culture, history, and biodiversity, offering a myriad of experiences to visitors. From tea estates to wildlife safaris and ancient temples, its beauty is truly unparalleled.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--open screen right square-->
+        <div class="rightSquareBG">
+            <img src="images/open page/right image.jpg" alt="right image" id="rightImage">
+            <!--Tourism text-->
+            <div class="bodyTextR">
+                <div class="containerR">
+                    <h1 class="h1R">Tourism</h1>
+                    <br>
+                    <div class="contentR v2R">
+                        <p class="p2">Sri Lanka is a popular tourism destination known for its natural beauty, cultural heritage, and tropical climate. Visitors can explore ancient ruins, tea plantations, and pristine beaches, as well as observe wildlife in national parks and reserves. With a range of activities available, from adventure sports to yoga retreats, Sri Lanka offers something for every type of traveler.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--logo-->
+        <div class="logo">
+            <img src="images/open page/logoSL.png" alt="">
+        </div>
+
+        <!--Quiz starting screen-->
+        <div id="openPage" itemid="openPage">
+            <div class="openPageSqure">
+                <img src="images/open page/middle image.jpg" alt="" id="middleImage">
+                <h1 id="welQui">Welcome to quizes</h1>
+                <div class="attempt" onclick="quizPageLoad()">
+                    <span>Attempt</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="quizPage" style="display:none;">
+
+        <!--quiz page left image-->
+        <div class="quizLImage"></div>
+
+        <!--quiz page right image-->
+        <div class="quizRImage"></div>
+
+        <!--Quizes-->
+        <div class="outBox" id="quiz" >
+
+            <!--Header part-->
+            <div class="boxHeader" id="headerBox">
+                <span>Question : <span id="questionNum"><span id="queCount">0</span>/10</span></span>
+                <span>Time : <span id="time">60</span></span>
+            </div>
+
+            <!--Body part of questions-->
+            <div class="boxBody">
+
+                
+                <div class="que">
+                    <form>
+                        <!--question 1-->
+                        <h4>1. Which city serves as Sri Lanka's capital?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q1anw1" name="anw" onclick="wrongQue1()">
+                            <span>i. Kandy</span><br>
+                            <input type="radio" id="Q1anw2" name="anw" onclick="wrongQue1()">
+                            <span>ii. Galle</span><br>
+                            <input type="radio" id="Q1anw3" name="anw" onclick="que1()">
+                            <span class="right1">iii. Colombo</span><br>
+                            <input type="radio" id="Q1anw4" name="anw" onclick="wrongQue1()">
+                            <span>iv. Mathara</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 2-->
+                        <h4>2. Where is Sri Lanka's most renowned beach located?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q2anw1" name="anw" onclick="que2()" value="correct">
+                            <span class="right2">i. Negombo</span><br>
+                            <input type="radio" id="Q2anw2" name="anw" onclick="wrongQue2()">
+                            <span>ii. Ella</span><br>
+                            <input type="radio" id="Q2anw3" name="anw" onclick="wrongQue2()">
+                            <span>iii. Sigiriya</span><br>
+                            <input type="radio" id="Q2anw4" name="anw" onclick="wrongQue2()">
+                            <span>iv. Kathmandu</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 3-->
+                        <h4>3. What's the name of the Sri Lankan historic city that's a UNESCO World Heritage Site?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q3anw1" name="anw" onclick="wrongQue3()">
+                            <span>i. Galle</span><br>
+                            <input type="radio" id="Q3anw2" name="anw" onclick="wrongQue3()">
+                            <span>ii. Nuwara Eliya</span><br>
+                            <input type="radio" id="Q3anw3" name="anw" onclick="wrongQue3()">
+                            <span>iii. Hikkaduwa</span><br>
+                            <input type="radio" id="Q3anw4" name="anw" onclick="que3()">
+                            <span class="right3">iv. Polonnaruwa</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 4-->
+                        <h4>4. What does the renowned temple in Kandy go by?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q4anw1" name="anw" onclick="wrongQue4()">
+                            <span>i. Golden Temple</span><br>
+                            <input type="radio" id="Q4anw2" name="anw" onclick="wrongQue4()">
+                            <span>ii. Lotus Temple</span><br>
+                            <input type="radio" id="Q4anw3" name="anw" onclick="que4()">
+                            <span class="right4">iii. Tooth Relic Temple</span><br>
+                            <input type="radio" id="Q4anw4" name="anw" onclick="wrongQue4()">
+                            <span>iv. Ruwanweliseya Temple</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 5-->
+                        <h4>5. Which Sri Lankan mountain range is renowned for its hiking trails?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q5anw1" name="anw" onclick="wrongQue5()">
+                            <span>i. Himalayas</span><br>
+                            <input type="radio" id="Q5anw2" name="anw" onclick="que5()">
+                            <span class="right5">ii. Knuckles Range</span><br>
+                            <input type="radio" id="Q5anw3" name="anw"  onclick="wrongQue5()">
+                            <span>iii. Rocky Mountains</span><br>
+                            <input type="radio" id="Q5anw4" name="anw"  onclick="wrongQue5()">
+                            <span>iv. Andes</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 6-->
+                        <h4>6. Which Sri Lankan national park is known for having a large population of elephants?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q6anw1" name="anw" onclick="wrongQue6()">
+                            <span>i. Horton Plains National Park</span><br>
+                            <input type="radio" id="Q6anw2" name="anw" onclick="wrongQue6()">
+                            <span>ii. Wilpattu National Park</span><br>
+                            <input type="radio" id="Q6anw3" name="anw" onclick="que6()">
+                            <span class="right6">iii. Yala National Park</span><br>
+                            <input type="radio" id="Q6anw4" name="anw" onclick="wrongQue6()">
+                            <span>iv. Kuanana National Park</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 7-->
+                        <h4>7. What is the name of the famous train ride in Sri Lanka that goes through picturesque tea plantations</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q7anw1" name="anw" onclick="que7()">
+                            <span class="right7">i. Kandy to Ella train ride</span><br>
+                            <input type="radio" id="Q7anw2" name="anw" onclick="wrongQue7()">
+                            <span>ii. Colombo to Galle train ride</span><br>
+                            <input type="radio" id="Q7anw3" name="anw" onclick="wrongQue7()">
+                            <span>iii. Anuradhapura to Jaffna train ride</span><br>
+                            <input type="radio" id="Q7anw4" name="anw" onclick="wrongQue7()">
+                            <span>iv. Venice Simplon Orient Express</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 8-->
+                        <h4>8. What is the name of the famous waterfall in Sri Lanka?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q8anw1" name="anw" onclick="que8()">
+                            <span class="right8">i. Bambarakanda Falls</span><br>
+                            <input type="radio" id="Q8anw2" name="anw" onclick="wrongQue8()">
+                            <span>ii. Niagara Falls</span><br>
+                            <input type="radio" id="Q8anw3" name="anw" onclick="wrongQue8()">
+                            <span>iii. Victoria Falls</span><br>
+                            <input type="radio" id="Q8anw4" name="anw" onclick="wrongQue8()">
+                            <span>iv. Angel Falls</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form>
+                        <!--question 9-->
+                        <h4>9. What is the name of the well-known Sri Lankan cultural performance that features local dance and music?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q9anw1" name="anw" onclick="wrongQue9()">
+                            <span>i. Bollywood Dance Show</span><br>
+                            <input type="radio" id="Q9anw2" name="anw" onclick="wrongQue9()">
+                            <span>ii. Salsa Dance Show</span><br>
+                            <input type="radio" id="Q9anw3" name="anw" onclick="wrongQue9()">
+                            <span>iii. Swan Lake Ballet</span><br>
+                            <input type="radio" id="Q9anw4" name="anw" onclick="que9()">
+                            <span class="right9">iv. Kandyan Dance Show</span>
+                        </div>
+                    </form>
+
+                    <br>
+                    <form class="finalQue">
+                        <!--question 10-->
+                        <h4>10. What is the name of the renowned fort from the time of Dutch colonization in Galle?</h4>
+                        <div class="anw">
+                            <input type="radio" id="Q10anw1" name="anw" onclick="wrongQue10()">
+                            <span>i. Colombo Fort</span><br>
+                            <input type="radio" id="Q10anw2" name="anw" onclick="que10()">
+                            <span  class="right10">ii. Galle Fort</span><br>
+                            <input type="radio" id="Q10anw3" name="anw" onclick="wrongQue10()">
+                            <span>iii. Jaffna Fort</span><br>
+                            <input type="radio" id="Q10anw4" name="anw" onclick="wrongQue10()">
+                            <span>iv. Red Fort</span>
+                        </div>
+                    </form>
+                </div>
+
+    </div>
+            
+            <!--footer part-->
+            <div class="boxFooter">
+                <button id="Submit" value="Submit" onclick="resutlsheet()">Submit</button> 
+            </div>
+        </div>
+    </div>
+
+    <!--result sheet-->
+    <div id="resultSheet" style="display:none;">
+        <text class="resultSheetText">Congratulations, You are done!</text>
+        <!-- below text  -->
+        <text class="rsBelow">Questions : 10</text><br>
+        <text class="rsBelow">Wrong Answers : <text id="wrong"> </text> </text><br>
+        <text class="rsBelow">Score : <text id="score"> </text> </text><br>
+        <text class="rsBelow">You took : <text id="takenTime"> </text> </text><br>
+        <text class="rsBelow"><text id="message"> </text> </text>
+        <br><br><br><br><br><br><br><br>
+        <button id="reload" onclick="goBackQuiz()">Start Again</button>
+    </div>
+
+    <!--Js part-->
+    <script>
+        let correct = 0;
+        let wrong = 0;
+        let queCount = 0;
+        let second = 60;
+        function quizPageLoad(){
+            document.getElementById("firstPG").style.display="none";
+            document.getElementById("quizPage").style.display="block";
+
+            //set the timer
+            const time= setInterval(() => {
+                document.querySelector("#time").innerHTML= second;
+                second--;
+                if(second == 0){
+                    clearInterval(time);
+                    resutlsheet();//call resultsheet after time's up
+                    document.getElementById("Submit").disabled=true;
+                }
+            },1000) 
+        }
+
+        //question 1 anwer check
+        function que1(){
+            queCount ++;
+            document.querySelector(".right1").style.backgroundColor = "green";
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q1anw1").disabled = true;
+            document.querySelector("#Q1anw2").disabled = true;
+            document.querySelector("#Q1anw4").disabled = true;
+            correct++;
+        }
+
+        function wrongQue1(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q1anw3").disabled = true;
+            document.querySelector("#Q1anw2").disabled = true;
+            document.querySelector("#Q1anw4").disabled = true;
+            document.querySelector("#Q1anw1").disabled = true;
+        }
+
+
+        //question 2 anwer check
+        function que2(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right2").style.backgroundColor = "green";
+            document.querySelector("#Q2anw3").disabled = true;
+            document.querySelector("#Q2anw2").disabled = true;
+            document.querySelector("#Q2anw4").disabled = true;
+        }
+
+        function wrongQue2(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q2anw3").disabled = true;
+            document.querySelector("#Q2anw2").disabled = true;
+            document.querySelector("#Q2anw4").disabled = true;
+            document.querySelector("#Q2anw1").disabled = true;
+        }
+
+        //question 3 answer check
+        function que3(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right3").style.backgroundColor="green";
+            document.querySelector("#Q3anw1").disabled = true;
+            document.querySelector("#Q3anw2").disabled = true;
+            document.querySelector("#Q3anw3").disabled = true;
+        }
+
+        function wrongQue3(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q3anw3").disabled = true;
+            document.querySelector("#Q3anw2").disabled = true;
+            document.querySelector("#Q3anw4").disabled = true;
+            document.querySelector("#Q3anw1").disabled = true;
+        }
+
+        //question 4 answer check
+        function que4(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right4").style.backgroundColor="green";
+            document.querySelector("#Q4anw1").disabled = true;
+            document.querySelector("#Q4anw2").disabled = true;
+            document.querySelector("#Q4anw4").disabled = true;
+        } 
+
+        function wrongQue4(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q4anw3").disabled = true;
+            document.querySelector("#Q4anw2").disabled = true;
+            document.querySelector("#Q4anw4").disabled = true;
+            document.querySelector("#Q4anw1").disabled = true;
+        }
+
+        //question 5 answer check
+        function que5(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right5").style.backgroundColor="green";
+            document.querySelector("#Q5anw1").disabled = true;
+            document.querySelector("#Q5anw4").disabled = true;
+            document.querySelector("#Q5anw3").disabled = true;
+        } 
+
+        function wrongQue5(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q5anw3").disabled = true;
+            document.querySelector("#Q5anw3").disabled = true;
+            document.querySelector("#Q5anw4").disabled = true;
+            document.querySelector("#Q5anw1").disabled = true;
+        }
+
+        //question 6 answer check
+        function que6(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right6").style.backgroundColor="green";
+            document.querySelector("#Q6anw1").disabled = true;
+            document.querySelector("#Q6anw4").disabled = true;
+            document.querySelector("#Q6anw2").disabled = true;
+        } 
+
+        function wrongQue6(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q6anw3").disabled = true;
+            document.querySelector("#Q6anw2").disabled = true;
+            document.querySelector("#Q6anw4").disabled = true;
+            document.querySelector("#Q6anw1").disabled = true;
+        }
+
+        //question 7 answer check
+        function que7(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right7").style.backgroundColor="green";
+            document.querySelector("#Q7anw3").disabled = true;
+            document.querySelector("#Q7anw4").disabled = true;
+            document.querySelector("#Q7anw2").disabled = true;
+        } 
+
+        function wrongQue7(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q7anw3").disabled = true;
+            document.querySelector("#Q7anw2").disabled = true;
+            document.querySelector("#Q7anw4").disabled = true;
+            document.querySelector("#Q7anw1").disabled = true;
+        }
+
+        //question 8 answer check
+        function que8(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right8").style.backgroundColor="green";
+            document.querySelector("#Q8anw3").disabled = true;
+            document.querySelector("#Q8anw4").disabled = true;
+            document.querySelector("#Q8anw2").disabled = true;
+        } 
+
+        function wrongQue8(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q8anw3").disabled = true;
+            document.querySelector("#Q8anw2").disabled = true;
+            document.querySelector("#Q8anw4").disabled = true;
+            document.querySelector("#Q8anw1").disabled = true;
+        }
+
+        //question 9 answer check
+        function que9(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right9").style.backgroundColor="green";
+            document.querySelector("#Q9anw3").disabled = true;
+            document.querySelector("#Q9anw1").disabled = true;
+            document.querySelector("#Q9anw2").disabled = true;
+        } 
+
+        function wrongQue9(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q9anw3").disabled = true;
+            document.querySelector("#Q9anw2").disabled = true;
+            document.querySelector("#Q9anw4").disabled = true;
+            document.querySelector("#Q9anw1").disabled = true;
+        }
+
+        //question 10 answer check
+        function que10(){
+            queCount += 1;
+            correct++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector(".right10").style.backgroundColor="green";
+            document.querySelector("#Q10anw3").disabled = true;
+            document.querySelector("#Q10anw4").disabled = true;
+            document.querySelector("#Q10anw1").disabled = true;
+        } 
+
+        function wrongQue10(){
+            queCount += 1;
+            wrong++;
+            document.querySelector("#queCount").innerHTML=queCount;
+            document.querySelector("#Q10anw3").disabled = true;
+            document.querySelector("#Q10anw2").disabled = true;
+            document.querySelector("#Q10anw4").disabled = true;
+            document.querySelector("#Q10anw1").disabled = true;
+        }
+
+        //resultSheet
+        function resutlsheet(){
+            setTimeout(() =>{
+                document.getElementById("resultSheet").style.opacity = 1;
+            },0);
+
+            document.getElementById("resultSheet").style.display="block";
+			document.getElementById("quiz").style.filter = "blur(10px)";
+            clearInterval(time);//clear the timer after submitted
+            document.getElementById("wrong").innerHTML= wrong;//display wrong answer amount
+            document.getElementById("score").innerHTML= (correct*10);//display the score
+            document.getElementById("takenTime").innerHTML= (60-second)+"s";//display taken time
+            if(correct>=7){
+                document.getElementById("message").textContent="Excellent Mark, Keep it up"; 
+                document.getElementById("message").style.color="#59ec88" ; 
+            }else if(correct>=5){
+                document.getElementById("message").textContent="Good Mark, Do better";
+                document.getElementById("message").style.color="blue";
+            }else if(correct>=3){
+                document.getElementById("message").textContent="Average Mark, Improve yourself more";
+                document.getElementById("message").style.color="orange";
+            }else{
+                document.getElementById("message").textContent="Low Mark, Study more"
+                document.getElementById("message").style.color="red";
+            }
+
+
+		}
+
+        //go back to quiz
+        function goBackQuiz(){
+            location.reload()
+        }
+
+    </script>
+</body>
+</html>

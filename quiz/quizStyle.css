@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+/* ----------------------------------
+quiz starting page setup 
+------------------------------------- */
+#openPage{
+    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+}
+
+/* ----------------------------------
+logo setup 
+------------------------------------- */
+.logo img{
+    position: absolute;
+    width: 100px;
+    left: 712px;
+    top: 120px;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------
+quiz starting outer line setup 
+------------------------------------- */
+.openPageSqure{
+    padding-top: 5%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    background: linear-gradient(to bottom, #281c54, transparent 95%); 
+    height: 753px;
+}
+
+/* ----------------------------------
+middle image of openPage setup 
+------------------------------------- */
+#middleImage{
+    position: relative;
+    top: -100px;
+    z-index: -1;
+    width: 800px;
+    height: 900px;
+}
+#welQui{
+    position: absolute;
+}
+
+/* ----------------------------------
+attempt button setup 
+------------------------------------- */
+.attempt{
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.attempt:hover{
+    background-color: #9ab5ac;
+    cursor: pointer;
+}
+
+.outBox{
+    width: 700px;
+    height: fit-content;
+    background-color: #f9f9f9;
+    box-shadow: 0px 3px 15px 6px #888888 ;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.boxHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px 6px 27px;
+    background-color: #281c54;
+    color: #ffff;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.que h4{
+    margin: 10px 0px 10px 10px;
+    font-size: 24px;
+    font-weight: 50;
+}
+
+/* ----------------------------------
+questions background setup 
+------------------------------------- */
+.boxBody{
+    /* background:linear-gradient(to right,white,black) ; */
+    background-color: #4c5048;
+    color: white;
+}
+
+/* ----------------------------------
+answers common setup 
+------------------------------------- */
+.anw input{
+    position: absolute;
+    opacity: 00;
+    width: 693px;
+    cursor: pointer;
+}
+.anw span{
+    font-size: 20px;
+    height: 25px;
+    display: block;
+    /* background-color: black; */
+    background:linear-gradient(to right,black,transparent) ;
+    color: white;
+    margin: 0px 10px -5px 10px;
+    border-radius: 5px 5px 5px 5px;
+    width: auto;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+}
+.anw input:hover + span{
+    background-color: #9ab5ac;
+}
+.anw input:checked + span{
+    background-color: red;
+} 
+
+
+/* ----------------------------------
+footer setup
+------------------------------------- */
+.boxFooter{
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    justify-content:space-around;
+    font-size: 20px;
+    transition: all 0.1 background-color color;
+}
+
+/* ----------------------------------
+submit button setup
+------------------------------------- */
+button{
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    border-radius:7px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+/* ----------------------------------
+result sheet setup 
+------------------------------------- */
+#resultSheet{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 650px;
+    background-color: #281c54;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 1;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 17px 8px black;
+    transition: opacity .7s;
+}
+
+/* ----------------------------------
+result sheet text setup 
+------------------------------------- */
+.resultSheetText{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 15%;
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Special Elite', cursive;
+}
+
+/* ----------------------------------
+result sheet below text setup 
+------------------------------------- */
+.rsBelow{
+    font-family: 'Patrick Hand', cursive;
+    color: white;
+    position: relative;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.6;
+    font-size: 24px;
+}
+
+/* ----------------------------------
+open page left square setup 
+------------------------------------- */
+.leftSquareBG{
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 360px;
+    background: linear-gradient(to top, #281c54, transparent ); 
+    height: 876px;
+}
+#leftImage{
+    position: absolute;
+    width: 420.8px;
+    height: 876px;
+    z-index: -1;
+}
+
+/* ----------------------------------
+open page right square setup 
+------------------------------------- */
+.rightSquareBG{
+    position: absolute;
+    left: 1160px;
+    width: 367.8px;
+    background: linear-gradient(to top, #281c54, transparent ); 
+    height: 876px;
+}
+#rightImage{
+    position: absolute;
+    width: auto;
+    height: 876px;
+    z-index: -1;
+}
+
+/* ----------------------------------
+quiz page left image setup 
+------------------------------------- */
+.quizLImage{
+    position: absolute;
+    width: 420px;
+    height: 2217px;
+    background-color: #281c54;
+    z-index: -1;
+    background-image: url("images/quiz\ page/traditionalDancerWhite.jpg");
+    background-repeat: no-repeat;
+    background-size: 1100px 2290px;
+    background-position: -370px -43px;
+}
+
+.quizRImage{
+    position: absolute;
+    left: 1100px;
+    display: flex;
+    justify-content: left;
+    width: 420px;
+    height: 2217px;
+    background-color: #281c54;
+    z-index: -1;
+    background-image: url("images/quiz\ page/traditionalDancerBlack.jpg");
+    background-repeat: no-repeat;
+    background-size: 1100px 2243px;
+    background-position: -302px;
+}
+
+/* ----------------------------------
+about sri lanka text setup 
+------------------------------------- */
+.bodyTextL{
+    padding-top: 600px;
+    font-family: Arial;
+    font-size: 1.5rem;
+    line-height: 100%;
+    background: transparent;
+    color: white;
+}
+
+.containerL {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.containerL .h1L {
+    font-size: 45px;
+}
+
+.contentL {
+    margin-bottom: 4em;
+    font-size: 16px;
+}
+
+.contentL .p1 {
+    display: inline;
+    background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
+}
+
+.v2L .p1 {
+    background-position: left;
+    background-size: 0% 100%;
+    background-image: linear-gradient(#FFE87C, #FFE87C);
+}
+
+.v2L:hover .p1 {
+    background-size: 100% 100%;
+    color: black;
+}
+
+/* ----------------------------------
+Go back to quiz setup 
+------------------------------------- */
+#reload{
+    border-radius: 10px;
+    mask-size: auto;
+    position: absolute;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Special Elite', cursive;
+}
+
+/* ----------------------------------
+about tourism text setup 
+------------------------------------- */
+.bodyTextR{
+    padding-top: 600px;
+    font-family: Arial;
+    font-size: 1.5rem;
+    line-height: 100%;
+    background: transparent;
+    color: white;
+}
+
+.containerR {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.containerR .h1R {
+    font-size: 45px;
+}
+
+.contentR {
+    margin-bottom: 4em;
+    font-size: 16px;
+}
+
+.contentR .p2{
+    display: inline;
+    background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
+}
+
+.v2R .p2 {
+    background-position: left;
+    background-size: 0% 100%;
+    background-image: linear-gradient(#FFE87C, #FFE87C);
+}
+
+.v2R:hover .p2 {
+    background-size: 100% 100%;
+    color: black;
+}
